@@ -1,5 +1,4 @@
 ﻿using ProjectManagementSystem;
-using System.Security.AccessControl;
 
 public class Program
 {
@@ -10,60 +9,62 @@ public class Program
         projectobj1.display("Project Management system");
         projectobj1.ProjectDetails();
         projectobj1.ProjectInfo();
-        projectobj1.projectId = 02;
-        WebDevelopment projectObj2 = new WebDevelopment();
-
+        projectobj1.ProjectID = 02;
+        WebDevelopmentProject projectObj2 = new WebDevelopmentProject();
+        var project = ProjectFactory.GetProject("HealthCareProject");
     }
 }
 public abstract class Project
 {
     //Data members
-    private int ProjectID;
-    public int projectId
+    private int _ProjectID;
+    public int ProjectID
     {
-        get { return ProjectID; }
-        // set { projectId = value; }
-        set
-        { 
-            ProjectID = value;
-        }
+        get { return _ProjectID; }
+        set { _ProjectID = value; }
     }
 
-    private int ManagerID;
-    public int managerId
+    private int _ManagerID;
+    public int ManagerId
     {
-        get { return ManagerID; }
-        set { ManagerID = value; }
+        get { return _ManagerID; }
+        set { _ManagerID = value; }
     }
-    private int CategoryID;
-    public int categoryId
+    private string _CategoryName;
+    public string CategoryName
     {
-        get { return CategoryID; }
-        set { CategoryID = value; }
+        get { return _CategoryName; }
+        set { _CategoryName = value; }
     }
-    private string ProjectName;
-    public string projectName
+    private string _ProjectName;
+    public string ProjectName
     {
-        get { return ProjectName; }
-        set { ProjectName = value; }
+        get { return _ProjectName; }
+        set { _ProjectName = value; }
     }
-    private string ProjectDescription;
-    public string projectDescription
+    private string _ProjectDescription;
+    public string ProjectDescription
     {
-        get { return ProjectDescription; }
-        set { ProjectDescription = value; }
+        get { return _ProjectDescription; }
+        set { _ProjectDescription = value; }
     }
-    private DateTime StartDate;
-    public DateTime startDate
+    private ProjectMembers _ProjectMember;
+    public ProjectMembers ProjectMember
     {
-        get { return StartDate; }
-        set { StartDate = value; }
+        get { return _ProjectMember; }
+        set { _ProjectMember = value; }
     }
-    private DateTime ExpectedEndDate;
-    public DateTime expectedEndDate
+    private DateTime _StartDate;
+    public DateTime StartDate
     {
-        get { return expectedEndDate; }
-        set { expectedEndDate = value; }
+        get { return _StartDate; }
+        set { _StartDate = value; }
+    }
+    private DateTime _ExpectedEndDate;
+    public DateTime ExpectedEndDate
+    {
+        get { return _ExpectedEndDate; }
+        set { _ExpectedEndDate = value; }
     }
     public Project()
     {
@@ -71,70 +72,22 @@ public abstract class Project
         this.ProjectID = 01;
     }
     public abstract void ProjectDetails();
-   // public virtual void ProjectDetail();
+    // public virtual void ProjectDetail();
     public void ProjectInfo()
     {
         Console.WriteLine("Method of the abstract class");
     }
-   internal void display(string ProjectName)
+    internal void display(string ProjectName)
     {
-        projectName= ProjectName;
-        Console.WriteLine("Project name:" + projectName);
+        ProjectName = ProjectName;
+        Console.WriteLine("Project name:" + ProjectName);
     }
-   internal void display(int projectId)
+    internal void display(int projectId)
     {
-        ProjectID= projectId;
+        ProjectID = projectId;
         Console.WriteLine("project Id:" + ProjectID);
     }
 }
-class HealthCareProject : Project, IProject
-{
 
-    public override void ProjectDetails()
-    {
-        Console.WriteLine("This is Healthcare Project");
-    }
 
-    void IProject.GetProjectCategory()
-    {
-        Console.WriteLine("Project category");
-    }
-
-    void IProject.GetProjectDescription()
-    {
-        Console.WriteLine("Project description");
-    }
-
-    void IProject.GetProjectMembersDetail()
-    {
-        Console.WriteLine("Project members details");
-    }
-
-    void IProject.GetProjectStatus()
-    {
-        Console.WriteLine("Project status");
-    }
-}
-class WebDevelopment : IProject
-{
-    void IProject.GetProjectCategory()
-    {
-        Console.WriteLine("Project category");
-    }
-
-    void IProject.GetProjectDescription()
-    {
-        Console.WriteLine("Project description");
-    }
-
-    void IProject.GetProjectMembersDetail()
-    {
-        Console.WriteLine("Project members details");
-    }
-
-    void IProject.GetProjectStatus()
-    {
-        Console.WriteLine("Project status");
-    }
-}
 

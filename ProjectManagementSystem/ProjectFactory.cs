@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectManagementSystem
 {
-    public class ProjectFactory
+    public  class ProjectFactory
     {
         public static IProject GetProject(string prj)
         {
@@ -17,7 +17,7 @@ namespace ProjectManagementSystem
             }
             else if(prj== "WebDevelopment")
             {
-                project = new WebDevelopment();
+                project = new WebDevelopmentProject();
             }
             return project;
         }

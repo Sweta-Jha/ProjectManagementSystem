@@ -8,9 +8,9 @@ namespace ProjectManagementSystem
 {
     public interface IProject
     {
-        void GetProjectDescription();
-        void GetProjectStatus();
-        void GetProjectMembersDetail();
-        void GetProjectCategory();
+        string GetProjectDescription();
+        string GetProjectStatus();
+        string GetProjectMemberName();
+        string GetProjectsCategoryName();
     }
 }

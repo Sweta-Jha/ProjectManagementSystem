@@ -8,69 +8,44 @@ namespace ProjectManagementSystem
 {
     public class ProjectMembers
     {
-        private int ProjectMemeberID;
-        public int projectMemberId
+        private int _ProjectMemeberID;
+        public int ProjectMemberId
         {
-            get { return ProjectMemeberID; }
-            set
-            {
-                ProjectMemeberID = value;
-            }
+            get { return ProjectMemberId; }
+            set { ProjectMemberId = value; }
         }
-        private string MemberName;
-        public string memberName
+        private string _MemberName;
+        public string MemberName
         {
-            get { return MemberName; }
-            set
-            {
-                MemberName = value;
-            }
+            get { return _MemberName; }
+            set { _MemberName = value; }
         }
-        private string ContactDetails;
-        public string contactDetails
+        private string _ContactDetails;
+        public string ContactDetails
         {
-            get { return contactDetails; }
-            set
-            {
-                contactDetails = value;
-            }
+            get { return _ContactDetails; }
+            set { _ContactDetails = value; }
         }
-        private int EmpCode;
-        public int empCode
+        private int _EmpCode;
+        public int EmpCode
         {
-            get { return EmpCode; }
-            set
-            {
-                EmpCode = value;
-            }
+            get { return _EmpCode; }
+            set { _EmpCode = value; }
         }
-        private int Allocation;
-        public int allocation
+        private int _Allocation;
+        public int Allocation
         {
-            get { return Allocation; }
-            set
-            {
-                Allocation = value;
-            }
+            get { return _Allocation; }
+            set { _Allocation = value; }
         }
-        private Project Project;
-        public Project project
-        {
-            get
-            {
-                return Project;
-            }
-            set { Project = value; }
-        }
-        public ProjectMembers(string memberName,string ProjectName,int allocation)
+        public ProjectMembers(string memberName, int allocation)
         {
             MemberName = memberName;
-            Project.projectName = ProjectName;
             Allocation = allocation;
         }
         public static void Main()
         {
-            ProjectMembers projectMembers = new ProjectMembers("Ramesh","Web development",40);
+            ProjectMembers projectMembers = new ProjectMembers("Ramesh", 40);
         }
     }
 }
