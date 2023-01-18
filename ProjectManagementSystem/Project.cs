@@ -11,7 +11,7 @@ public class Program
         projectobj1.ProjectInfo();
         projectobj1.ProjectID = 02;
         WebDevelopmentProject projectObj2 = new WebDevelopmentProject();
-        var project = ProjectFactory.GetProject("HealthCareProject");
+        var projectType = ProjectFactory.GetProject("HealthCareProject");
     }
 }
 public abstract class Project
@@ -77,12 +77,12 @@ public abstract class Project
     {
         Console.WriteLine("Method of the abstract class");
     }
-    internal void display(string ProjectName)
+    public void display(string ProjectName)
     {
         ProjectName = ProjectName;
         Console.WriteLine("Project name:" + ProjectName);
     }
-    internal void display(int projectId)
+    public void display(int projectId)
     {
         ProjectID = projectId;
         Console.WriteLine("project Id:" + ProjectID);
