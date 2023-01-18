@@ -11,8 +11,8 @@ namespace ProjectManagementSystem
         private int _ProjectMemeberID;
         public int ProjectMemberId
         {
-            get { return ProjectMemberId; }
-            set { ProjectMemberId = value; }
+            get { return _ProjectMemeberID; }
+            set { _ProjectMemeberID = value; }
         }
         private string _MemberName;
         public string MemberName
