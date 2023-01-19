@@ -8,21 +8,33 @@ namespace ProjectManagementSystem
 {
     class WebDevelopmentProject : IProject
     {
+        public string ProjectName;
+        public string ProjectDescription;
+        public string ProjectStatus;
+        public ProjectMembers ProjectMembers;
+        public string ProjectCategory;
+        public WebDevelopmentProject()
+        {
+            ProjectName = "WebTool";
+            ProjectDescription = "WebDevelopmentProject";
+            ProjectStatus = "InProgress";
+            ProjectCategory = "Technology"; 
+        }
         public string GetProjectDescription()
         {
-            return "WebDevelopmentProject";
+            return ProjectDescription;
         }
         public string GetProjectStatus()
         {
-            return "InProgress";
+            return ProjectStatus;
         }
         public string GetProjectMemberName()
         {
-            return "Suresh";
+            return ProjectMembers.MemberName;
         }
         public string GetProjectsCategoryName()
         {
-            return "Technology";
+            return ProjectCategory;
         }
     }
 }
