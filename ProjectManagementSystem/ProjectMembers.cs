@@ -8,35 +8,35 @@ namespace ProjectManagementSystem
 {
     public class ProjectMembers
     {
-        private int _ProjectMemeberID;
+        private int _projectMemeberID;
         public int ProjectMemberId
         {
-            get { return _ProjectMemeberID; }
-            set { _ProjectMemeberID = value; }
+            get { return _projectMemeberID; }
+            set { _projectMemeberID = value; }
         }
-        private string _MemberName;
+        private string _memberName;
         public string MemberName
         {
-            get { return _MemberName; }
-            set { _MemberName = value; }
+            get { return _memberName; }
+            set { _memberName = value; }
         }
-        private string _ContactDetails;
+        private string _contactDetails;
         public string ContactDetails
         {
-            get { return _ContactDetails; }
-            set { _ContactDetails = value; }
+            get { return _contactDetails; }
+            set { _contactDetails = value; }
         }
-        private int _EmpCode;
+        private int _empCode;
         public int EmpCode
         {
-            get { return _EmpCode; }
-            set { _EmpCode = value; }
+            get { return _empCode; }
+            set { _empCode = value; }
         }
-        private int _Allocation;
+        private int _allocation;
         public int Allocation
         {
-            get { return _Allocation; }
-            set { _Allocation = value; }
+            get { return _allocation; }
+            set { _allocation = value; }
         }
         public ProjectMembers(string memberName, int allocation)
         {

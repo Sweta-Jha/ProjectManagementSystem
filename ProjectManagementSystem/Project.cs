@@ -17,54 +17,54 @@ public class Program
 public abstract class Project
 {
     //Data members
-    private int _ProjectID;
+    private int _projectID;
     public int ProjectID
     {
-        get { return _ProjectID; }
-        set { _ProjectID = value; }
+        get { return _projectID; }
+        set { _projectID = value; }
     }
 
-    private int _ManagerID;
+    private int _managerID;
     public int ManagerId
     {
-        get { return _ManagerID; }
-        set { _ManagerID = value; }
+        get { return _managerID; }
+        set { _managerID = value; }
     }
-    private string _CategoryName;
+    private string _categoryName;
     public string CategoryName
     {
-        get { return _CategoryName; }
-        set { _CategoryName = value; }
+        get { return _categoryName; }
+        set { _categoryName = value; }
     }
-    private string _ProjectName;
+    private string _projectName;
     public string ProjectName
     {
-        get { return _ProjectName; }
-        set { _ProjectName = value; }
+        get { return _projectName; }
+        set { _projectName = value; }
     }
-    private string _ProjectDescription;
+    private string _projectDescription;
     public string ProjectDescription
     {
-        get { return _ProjectDescription; }
-        set { _ProjectDescription = value; }
+        get { return _projectDescription; }
+        set { _projectDescription = value; }
     }
-    private ProjectMembers _ProjectMember;
+    private ProjectMembers _projectMember;
     public ProjectMembers ProjectMember
     {
-        get { return _ProjectMember; }
-        set { _ProjectMember = value; }
+        get { return _projectMember; }
+        set { _projectMember = value; }
     }
-    private DateTime _StartDate;
+    private DateTime _startDate;
     public DateTime StartDate
     {
-        get { return _StartDate; }
-        set { _StartDate = value; }
+        get { return _startDate; }
+        set { _startDate = value; }
     }
-    private DateTime _ExpectedEndDate;
+    private DateTime _expectedEndDate;
     public DateTime ExpectedEndDate
     {
-        get { return _ExpectedEndDate; }
-        set { _ExpectedEndDate = value; }
+        get { return _expectedEndDate; }
+        set { _expectedEndDate = value; }
     }
     public Project()
     {
