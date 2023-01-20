@@ -24,7 +24,7 @@ namespace ProjectManagementSystem
         {
             return "InProgress";
         }
-        public override void ProjectDetails()
+        public override void ProjectInformation()
         {
             Console.WriteLine("This is Healthcare Project");
         }

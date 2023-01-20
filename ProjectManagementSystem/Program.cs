@@ -13,8 +13,7 @@ namespace ProjectManagementSystem
             Project projectobj1 = new HealthCareProject();
             projectobj1.display(02);
             projectobj1.display("Project Management system");
-            projectobj1.ProjectDetails();
-            projectobj1.ProjectInfo();
+            projectobj1.ProjectDetailInformation();
             projectobj1.ProjectID = 02;
             WebDevelopmentProject projectObj2 = new WebDevelopmentProject();
             var projectType = ProjectFactory.GetProject("WebDevelopment");

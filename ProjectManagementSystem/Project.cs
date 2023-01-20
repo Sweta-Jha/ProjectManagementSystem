@@ -57,12 +57,8 @@ public abstract class Project
         Console.WriteLine("constructor call");
         this.ProjectID = 01;
     }
-    public abstract void ProjectDetails();
+    public abstract void ProjectDetailInformation();
     // public virtual void ProjectDetail();
-    public void ProjectInfo()
-    {
-        Console.WriteLine("Method of the abstract class");
-    }
     public void display(string ProjectName)
     {
         ProjectName = ProjectName;
